@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pyar Ek aduri jang</title>
+
+<meta name="description" content="Read Pyar  Ek Adhuri Jang - a real emotional love story of Abhishek Singh and Vishakha Hans from Naharpur Rupa, Gurugram. A journey of love, struggle, and one unforgettable year.">
+
+<meta name="keywords" content="Pyar Ek Adhuri Jang,Abhishk and Vishakha, Abhishek Singh love story, Vishakha Hans, Hanshu hans  , Naharpur Rupa love story,Naharpur hanshu hans, Gurugram real love story, emotional Hindi story, sad love story India,Vishakha or Abhishek, Naharpur rupa sec 33 ki khani">
+
+<meta name="author" content="Abhishek Singh">
+<meta name="vilian" content="hanshu hans">
+
+<meta name="robots" content="index, follow">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Pyar, Ek Adhuri Jang",
+  "author": {
+    "@type": "Person",
+    "name": "Samaj"
+  },
+  "description": "love story of Vishakha Hans and  Abhishek Singh  from Naharpur Rupa, Gurugram.",
+  "inLanguage": "Hindi",
+  "genre": "Romance",
+
+  "character": [
+    {
+      "@type": "Person",
+      "name": "Vishakha Hans",
+      "description": "Main female lead, kind-hearted and innocent girl."
+    },
+    {
+      "@type": "Person",
+      "name": "Hanshu Hans",
+      "description": "Strict and powerful brother of Vishakha."
+    },
+    {
+      "@type": "Person",
+      "name": "Shila Hans",
+      "description": "Mother of Vishakha, part of a strict family."
+    }
+  ]
+}
+</script>
+</script>
+<style>
+:root{
+  --primary:#0ea5e9;
+  --dark:#0f172a;
+}
+
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:#f8fafc;
+}
+
+/* HEADER NAV */
+.navbar{
+  display:none;
+  position:fixed;
+  top:0;
+  width:100%;
+  background:white;
+  padding:10px 20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  z-index:1000;
+  display:flex;
+  justify-content:space-between;
+}
+
+.navbar button{
+  border:none;
+  background:var(--primary);
+  color:white;
+  padding:8px 15px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* COVER */
+.cover{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.cover button{
+  margin-top:20px;
+  padding:12px 25px;
+  background:var(--primary);
+  color:white;
+  border:none;
+  border-radius:6px;
+}
+
+/* MAIN */
+.container{
+  display:none;
+  max-width:900px;
+  margin:auto;
+  padding:80px 20px 20px;
+}
+
+/* TOGGLE TOC */
+.toggle-btn{
+  margin:10px 0;
+  cursor:pointer;
+  color:var(--primary);
+}
+
+.toc{
+  display:none;
+  background:white;
+  padding:15px;
+  border-radius:10px;
+}
+
+.toc div{
+  padding:10px;
+  cursor:pointer;
+}
+
+/* BOOK */
+/* BOOK */
+.book{
+  margin-top:20px;
+  height:auto;
+  position:relative;
+}
+
+/* FIXED PAGE UI */
+.page{
+  display:none;
+  width:100%;
+  background:white;
+  border-radius:10px;
+  padding:20px;
+}
+
+/* ONLY ACTIVE PAGE SHOW */
+.page.active{
+  display:block;
+}
+.page.flipped{
+  transform:rotateY(-180deg);
+}
+
+/* FLOAT CONTROLS */
+.floating-controls{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:10px;
+  z-index:1000;
+}
+
+.floating-controls button{
+  padding:12px 18px;
+  border:none;
+  border-radius:50px;
+  background:var(--primary);
+  color:white;
+  cursor:pointer;
+  box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="cover" id="cover">
+  <h1>🔥 Pyar ek adhuri Jung</h1>
+  <p>Ek Kahani… jahan pyaar bhi tha aur  saalo ki jung bhi</p>
+  <button onclick="startReading()">Start</button>
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar" id="navbar">
+  <button onclick="goHome()">🏠 Home</button>
+  <button onclick="toggleTOC()">📑 Contents</button>
+</div>
+
+<div class="container" id="main">
+
+  <div class="toggle-btn" onclick="toggleTOC()">📑 Show / Hide Contents</div>
+
+  <div class="toc" id="toc">
+    <div onclick="goToPage(0)">Chapter 1</div>
+    <div onclick="goToPage(1)">Chapter 2</div>
+    <div onclick="goToPage(2)">Chapter 3</div>
+    <div onclick="goToPage(3)">Chapter 4</div>
+    <div onclick="goToPage(4)">Chapter 5</div>
+    <div onclick="goToPage(5)">Chapter 6</div>
+    <div onclick="goToPage(6)">Chapter 7</div>
+    <div onclick="goToPage(7)">Chapter 8</div>
+    <div onclick="goToPage(8)">Chapter 9</div>
+    <div onclick="goToPage(9)">Chapter 10</div>
+  </div>
+
+  <div class="book">
+    <div class="page" style="z-index:10">
+      <h1> Wo Gusse Wala Ladka – </h1>
+
+        <p>Ek ladka tha…<br>
+        nadaan, ziddi… aur gusse se bhara hua.</p>
+
+        <p><strong>Naam — Abhishek Singh.</strong></p>
+
+        <p>Use galat baat bilkul bardasht nahi thi. Log sochte the ki wo bas ladta rehta hai…<br>
+        par sach ye tha — wo har cheez dil se karta tha.</p>
+
+        <p>Ek baar to usne school ke principal tak ko gaali de di thi…<br>
+        kyunki use laga — wo galat hain.</p>
+
+        <p>Uske liye duniya simple thi:</p>
+        <ul>
+            <li>👉 Sahi ya Galat</li>
+            <li>👉 Beech ka kuch nahi</li>
+        </ul>
+
+        <p>Aur yahin se meri kahani shuru hoti hai…</p>
+
+        <p>Main… haan main hi wo ladka hoon.<br>
+        Log mujhe awara samajhte the… par main alag tha.</p>
+
+        <p>Sahi ko sahi… galat ko galat bolne wala.<br>
+        Doston ke liye jaan dene wala.</p>
+
+        <p>Bas ek 16 saal ka bachcha tha…<br>
+        Maa-baap ka pyaar kam mila…<br>
+        khud hi khelna, khud hi ladna, khud hi sambhalna pada.</p>
+
+        <p>Padhai se mera door-door tak koi rishta nahi tha…<br>
+        Sach kahu to padhna mujhe pasand hi nahi tha.</p>
+
+        <p>Meri duniya simple thi —<br>
+        khel, masti, dosti… aur thoda sa gussa.</p>
+
+        <p>Sab kuch normal chal raha tha…<br>
+        ekdum simple life…</p>
+
+        <p><strong>Lekin…</strong></p>
+
+        <p>Ek din…<br>
+        kuch aisa hua…</p>
+
+        <p>jisne meri poori duniya badal di.</p>
+
+        <p>Aur shayad…<br>
+        ussi din meri kahani me entry hui…</p>
+
+        <h2>"Uski…"</h2>
+
+    </div>    
+    
+    <div class="page" style="z-index:9">
+      <h1> Wo Muskaan… Jisne Badal Diya Sab</h1>
+
+      <p>Wo ussi school mein padhti thi… jahan main padhta tha.</p>
+
+      <p>Roz class mein…<br>
+      ya school ke corridor mein…<br>
+      hum bas ek dusre ko dekhte rehte the.</p>
+
+      <p>Wo mujhe dekhti…<br>
+      aur halki si muskaan de deti.</p>
+
+      <p><strong>Uska naam — Vishakha Hans.</strong></p>
+
+      <p>Masoom si shakal…<br>
+      pyari si muskaan…<br>
+      aur bahut hi accha nature.</p>
+
+      <p>Wo duniya ki sabse achi ladki thi…<br>
+      kam se kam mujhe to aisa hi lagta tha.</p>
+
+      <p>Wo mujhse bilkul alag thi…<br>
+      shaant, seedhi… aur padhai mein bahut achi.</p>
+
+      <p>Sab use pyaar karte the…<br>
+      aur wo bhi sabke liye hamesha accha hi sochti thi.</p>
+
+      <p>Main… jo poori duniya ke saamne sakht tha…<br>
+      uske saamne… pighal jaata tha.</p>
+
+      <p>Wo mujhe pasand thi…<br>
+      bahut.</p>
+
+      <p>Par maine kabhi kaha nahi…</p>
+
+      <p><strong>Kyunki…</strong></p>
+
+      <p>Uski duniya alag thi.</p>
+
+      <p>Ek aisa parivaar…<br>
+      jahan darr tha… dabav tha…<br>
+      aur power bhi.</p>
+
+      <p>Uska bhai aur uska parivaar…<br>
+      kaafi strict aur khatarnak tha.</p>
+
+      <p>Wo ameer thi…<br>
+      aur main… bas ek simple ladka.</p>
+
+      <p>Lekin…</p>
+
+      <p>Wo bhi mujhe dekh kar khush hoti thi…<br>
+      aur shayad… wo bhi mujhe pasand karti thi.</p>
+
+      <p>Par usne bhi kabhi kuch nahi kaha…</p>
+
+      <p>Dono ek dusre ko dekhte rehte the…<br>
+      par kabhi baat nahi hui.</p>
+
+      <p><strong>Ek muskaan…</strong><br>
+      bas wahi connection tha hum dono ke beech.</p>
+
+      <p>Lekin…</p>
+
+      <p>Kya ye khamoshi kabhi tootegi?</p>
+
+      <p>Ya phir… darr hi jeet jayega?</p>
+
+    
+    </div>
+    <div class="page" style="z-index:8">
+      
+      <h1>Wo Tumhe Bahut Pasand Karti Hai</h1>
+
+  <p>Ek din…<br>
+  uski dost Khushboo aayi.</p>
+
+  <p>Usne mujhse kaha:</p>
+
+  <p><strong>
+  "Wo tumhe bahut pasand karti hai…"
+  </strong></p>
+
+  <p>Us pal…<br>
+  dil ne kaha — haan bol de.</p>
+
+  <p>Dimaag ne kaha — door reh.</p>
+
+  <p>Aur…</p>
+
+  <p><strong>Maine mana kar diya.</strong></p>
+
+  <p>"Main relationship mein nahi aa sakta…"</p>
+
+  <p>Par sach ye tha…<br>
+  <strong>main dar gaya tha.</strong></p>
+
+  <p>Lekin…</p>
+
+  <p><strong>Pyaar rukta nahi hai.</strong></p>
+
+  <p>Kuch din baad…<br>
+  ek din usne khud keh diya —</p>
+
+  <p><strong>
+  "Mujhe tumse pyaar hai."
+  </strong></p>
+
+  <p>Pehle toh maine fir se mana kar diya…<br>
+  kyunki hum dono bahut alag the.</p>
+
+  <p>Par dil se bhaag kab tak sakta tha?</p>
+
+  <p><strong>Aakhir maine bhi haan keh di.</strong></p>
+
+  <p>Aur sach kahu toh…<br>
+  <strong>wo meri life ka sabse best decision tha.</strong></p>
+
+  <p>Dheere dheere hum aur kareeb aa gaye…</p>
+
+  <p>Roz milna… baatein karna…<br>
+  ye sirf aadat nahi rahi…<br>
+  <strong>zarurat ban gayi.</strong></p>
+
+  <p>Phir aaya wo pal…</p>
+
+  <p><strong>Hamari pehli kiss.</strong></p>
+
+  <p>Aaj bhi yaad hai mujhe…<br>
+  main sharm se bilkul laal ho gaya tha…<br>
+  aur wo bas muskura rahi thi.</p>
+
+  <p>Uske baad toh…</p>
+
+  <p>Roz milna… hansna…<br>
+  chup chup ke baatein karna…</p>
+
+  <p><strong>Sab kuch ek khoobsurat kahani ban gaya.</strong></p>
+
+  <p>Ek din maine use mehndi bhi lagayi…<br>
+  aur aas-paas ki saari ladkiyaan hume dekh rahi thi.</p>
+
+  <p>Wo pal…<br>
+  <strong>jaise waqt ruk gaya ho.</strong></p>
+
+  <p>Ab haal ye tha ki…</p>
+
+  <p><strong>Ek din bhi ek dusre ke bina rehna mushkil ho gaya tha.</strong></p>
+
+  <p>Aur tabhi…</p>
+
+  <p><strong>COVID-19 aa gaya.</strong></p>
+
+  <p>Dooriyan…<br>
+  lockdown…<br>
+  aur pyaar ka ek naya imtihaan shuru ho gaya.</p>
+
+    </div>
+    <div class="page" style="z-index:7">
+
+
+  <p>Sab kuch perfect tha…</p>
+
+  <p>Aur phir…<br>
+  <strong>lockdown aa gaya.</strong></p>
+
+  <p>School band…<br>
+  Milna band…</p>
+
+  <p>Par <strong>pyaar nahi ruka.</strong></p>
+
+  <p>Ab hum din-bhar calls par rehte the—<br>
+  video calls… messages…<br>
+  aur bas ek hi intezaar:</p>
+
+  <blockquote>“Kab milenge…”</blockquote>
+
+  <p><strong>COVID-19</strong> ne sab kuch rok diya…<br>
+  par humein nahi.</p>
+
+  <p>Humari yaadein… humari baatein…<br>
+  aur wo chhoti-chhoti calls hi<br>
+  hamara naya milna ban gayi.</p>
+
+  <p>Shayad wahi time tha<br>
+  jab hamara pyaar sabse zyada gehra ho gaya.</p>
+
+  <p>Aur phir…<br>
+  aaya uska birthday.</p>
+
+
+
+
+  <p><strong>18 August…</strong></p>
+
+  <p>Wo chupke se mujhse milne aayi.</p>
+
+  <p>Maine uske liye cake arrange kiya tha…<br>
+  chhota sa, par dil se.</p>
+
+  <p>Maine usse cake cut karwaya…<br>
+  wo thodi nervous thi, thodi khush.</p>
+
+  <p>Aur phir mujhe pata chala—<br>
+  👉 <strong>usne apni life mein pehli baar cake cut kiya tha.</strong></p>
+
+  <p>Uske ghar mein…<br>
+  kabhi us par itna dhyaan hi nahi diya gaya tha.</p>
+
+  <p>Wo bas mujhe dekh rahi thi…<br>
+  aankhon mein ajeeb si chamak thi.</p>
+
+  <p>Phir usne mujhe hug kiya…</p>
+
+  <p>Wo hug normal nahi tha—<br>
+  usme shukriya tha, pyaar tha…<br>
+  aur ek chup sa dard bhi.</p>
+
+  <p>Us din…<br>
+  wo sirf meri girlfriend nahi thi…</p>
+
+  <p>👉 <strong>wo meri zimmedari ban gayi thi.</strong></p>
+
+    </div>
+    <div class="page" style="z-index:6">
+      <h2> “Ek Tufaan”</h2>
+
+  <p>Phir aaya… ek tufaan.</p>
+
+  <p><strong>Mere birthday wale din.</strong></p>
+
+  <p>Sab kuch normal tha…<br>
+  main usse milne gaya tha, tution ke paas.</p>
+
+  <p>Hum dono khush the…<br>
+  haste hue, ek dusre ke saath.</p>
+
+  <p>Par pata nahi kahan se…<br>
+  <strong>uska bhai  hanshu has aa gaya.</strong></p>
+
+  <p>Sab kuch ek pal mein badal gaya.</p>
+
+  <p>Usne mujhe mara…<br>
+  aur bahut dhamki di.</p>
+
+  <p>Us din…<br>
+  hum alag ho gaye.</p>
+
+  <p>Lekin…<br>
+  <strong>pyaar kam nahi hua.</strong></p>
+
+  <p>Wo baar-baar beech mein aata raha…<br>
+  aur hamari story mein rukawat banta raha.</p>
+
+  <p>Phir ye silsila ban gaya—<br>
+  <em>bichhadna… fir milna… fir bichhadna…</em></p>
+
+  <p>Har baar lagta tha sab khatam ho gaya…<br>
+  par hum phir wapas aa jaate the.</p>
+
+  <p>Sabse badi baat…<br>
+  👉 <strong>us ladki ne kabhi mera saath nahi chhoda.</strong></p>
+
+  <p>Chahe kitni bhi problem aayi ho…<br>
+  wo hamesha mere saath khadi rahi.</p>
+
+  <p>Phir shuru hua…<br>
+  <strong>saalon ka intezaar.</strong></p>
+
+  <p>Ek aisa intezaar…<br>
+  jisme sirf umeed thi…<br>
+  aur ek dusre par bharosa.</p>
+
+  <p>Hum bas ek hi cheez ka wait kar rahe the—<br>
+  <em>kab sab theek hoga…</em></p>
+
+  <p>Aur phir…<br>
+  ek din wo waqt bhi aaya…</p>
+
+  <p>👉 <strong>jab uska bhai internship par chala gaya.</strong></p>
+
+  <p>Jaise kisi ne…<br>
+  hamari zindagi se sabse badi rukawat hata di ho.</p>
+    </div>
+    <div class="page" style="z-index:5">
+      
+
+  <h1>Ek Naya Mod…</h1>
+
+  <p>Phir ek din…</p>
+
+  <p>Uska bhai internship ke liye bahar chala gaya.</p>
+
+  <p>Aur…<br>
+  jaise kismat ne unhe ek mauka de diya ho…</p>
+
+  <p><strong>Do saal baad…<br>
+  wo phir mile.</strong></p>
+
+  <p>Wo pal…<br>
+  shabdon mein bayaan nahi ho sakta tha.</p>
+
+  <p>Do saal ki dooriyan…<br>
+  ek pal mein mit gayi thi.</p>
+
+  <p>Ab milne ke liye wo kya-kya karte the…</p>
+
+  <ul>
+    <li>👉 Kabhi dost ke ghar</li>
+    <li>👉 Kabhi chupke se bahar</li>
+    <li>👉 Aur yahan tak ki…</li>
+  </ul>
+
+  <p><strong>Abhishek ne rent par ek flat le liya.</strong></p>
+
+  <p>Wo mahine mein sirf 2 baar milte the…<br>
+  par rent poore mahine ka dete the.</p>
+
+  <p>Kyunki…</p>
+
+  <p><strong>Wo pal hi unki poori duniya the.</strong></p>
+
+  <p>Har mulaqat…<br>
+  ek nayi zindagi jaisi lagti thi.</p>
+
+  <p>Wo din…<br>
+  sach mein bahut khoobsurat the…</p>
+
+  <p><strong>Lekin…</strong></p>
+
+  <p>Har khushi zyada der tak nahi tikti…</p>
+
+  <p>Ek din…</p>
+
+  <p><strong>Hanshu wapas aa gaya.</strong></p>
+
+  <p>Aur uske saath…<br>
+  wapas aa gaya darr…</p>
+
+  <p>Ab kya hoga?</p>
+
+  <p>Kya unka pyar fir se toot jayega…?</p>
+
+  <p><strong>Ya is baar wo ladenge…?</strong></p>
+
+
+    </div>
+    <div class="page" style="z-index:4">
+      
+
+  <h1>Dooriyan… Phir Se</h1>
+
+  <p>Sab accha chal raha tha…</p>
+
+  <p>Aur phir…<br>
+  wo wapas aa gaya.</p>
+
+  <p>Hanshu ke wapas aate hi…<br>
+  sab kuch badal gaya.</p>
+
+  <p>Phir se wahi darr…<br>
+  phir se wahi dooriyan…<br>
+  phir se chupna…</p>
+
+  <p>Lekin…</p>
+
+  <p><strong>Pyar ab bhi zinda tha.</strong></p>
+
+  <p>Hum phir bhi milte the…<br>
+  chup chup ke…</p>
+
+  <p>Har mulaqat mein darr hota tha…<br>
+  par usse zyada pyar hota tha.</p>
+
+  <p>Har baar lagta tha…<br>
+  shayad ye last ho…</p>
+
+  <p>Par hum ruk nahi paate the…</p>
+
+  <p><strong>Ek dusre ke bina rehna mushkil tha.</strong></p>
+
+  <p>Lekin…</p>
+
+  <p>Ek din…<br>
+  phir se sab kuch toot gaya.</p>
+
+  <p><strong>Uske bhai ko fir se sab pata chal gaya.</strong></p>
+
+  <p>Is baar…<br>
+  sab kuch ruk gaya.</p>
+
+  <p>Na baat…<br>
+  na mulaqat…<br>
+  na koi rasta…</p>
+
+  <p>Bas ek cheez reh gayi…</p>
+
+  <p><strong>Intzaar…</strong></p>
+
+  <p>Aisa intzaar…<br>
+  jiska shayad koi ant hi nahi tha.</p>
+
+</div>
+    
+    <div class="page" style="z-index:3">
+      
+
+  <h1>Ek Saal Ka Challenge</h1>
+
+  <p><strong>4 August 2025…</strong></p>
+
+  <p>Raat ko ek phone aaya…</p>
+
+  <p><strong>Uske bhai ka.</strong></p>
+
+  <p>Uski awaaz thandi thi…<br>
+  par alfaaz tez.</p>
+
+  <p>Usne kaha:</p>
+
+  <p><strong>
+  "Shaadi karni hai to 50 lakh saalana kama ke dikhao…<br>
+  aur sirf 1 saal hai tumhare paas."
+  </strong></p>
+
+  <p>Phone cut ho gaya…</p>
+
+  <p>Aur us raat…<br>
+  meri zindagi badal gayi.</p>
+
+  <p>Shuru mein laga ye sirf ek dhamki hai…<br>
+  ek tareeka hume alag karne ka.</p>
+
+  <p>Lekin…</p>
+
+  <p>Kuch waqt baad…<br>
+  fir se uska call aaya.</p>
+
+  <p>Is baar…<br>
+  uski awaaz alag thi.</p>
+
+  <p>Na gussa… na dhamki…</p>
+
+  <p><strong>Wo hamare pyar ko samajhne laga tha.</strong></p>
+
+  <p>Usne kaha:</p>
+
+  <p><strong>
+  "Tu kama ke dikha… fir dekhte hain."
+  </strong></p>
+
+  <p>Main chup tha…</p>
+
+  <p>Dimaag mein hazaar sawaal the —<br>
+  Kaise hoga?<br>
+  Kitni mushkilein aayengi?<br>
+  Kya main kar paunga?</p>
+
+  <p>Lekin…</p>
+
+  <p><strong>Maine haan kar di.</strong></p>
+
+  <p>Challenge accepted.</p>
+
+  <p>Us din se…<br>
+  main badal gaya.</p>
+
+  <p>Main lag gaya mehnat mein…<br>
+  din-raat bina ruke.</p>
+
+  <p><strong>Maine apni khud ki company shuru ki —<br>
+  "Crystallite Infotech".</strong></p>
+
+  <p>Apps banaye…<br>
+  websites develop ki…<br>
+  AI seekha…</p>
+
+  <p>Jobs ke liye apply kiya…<br>
+  internships bhi ki…</p>
+
+  <p>Har din… ek nayi struggle thi…<br>
+  par har raat… ek nayi umeed.</p>
+
+  <p>Dheere dheere…</p>
+
+  <p><strong>Sab kuch possible lagne laga.</strong></p>
+
+  <p>Aisa lag raha tha…<br>
+  jaise iss baar sab theek ho jayega…</p>
+
+  <p>Jaise iss baar…<br>
+  main jeet jaunga.</p>
+
+  <p><strong>Lekin…</strong></p>
+
+  <p>Jab sab sahi lagne laga tha…</p>
+
+  <p><strong>Tabhi shuru hui… ek saazish.</strong></p>
+
+</div>
+    
+    <div class="page" style="z-index:2">
+      
+
+  <h1>Dhoka… Ya Majboori?</h1>
+
+  <p>Jab main mehnat kar raha tha…<br>
+  apne sapno ke liye…<br>
+  hamare pyar ke liye…</p>
+
+  <p>Udhar…<br>
+  uske liye rishte dhoonde ja rahe the.</p>
+
+  <p>Lekin…</p>
+
+  <p><strong>Usne har baar mana kiya.</strong></p>
+
+  <p>"Mujhe shaadi karni hai…<br>
+  to bas ussi se."</p>
+
+  <p>Wo lad rahi thi…<br>
+  apno se hi… apne pyar ke liye.</p>
+
+  <p>Lekin…</p>
+
+  <p><strong>5 mahine baad…</strong></p>
+
+  <p>Achanak pata chala…<br>
+  uska bhai uske liye rishta dhoond raha hai.</p>
+
+  <p>Ghar ka mahaul badal gaya tha…</p>
+
+  <p>Usne kaha:<br>
+  "Main kuch nahi kar paungi…"</p>
+
+  <p>Vishakha toot rahi thi…</p>
+
+  <p>Wo royi…<br>
+  gidgidayi…<br>
+  apne hi ghar walon ke saamne…</p>
+
+  <p><strong>Pyar ki bheekh maangi usne.</strong></p>
+
+  <p>Lekin…</p>
+
+  <p>Us din uske ghar walon ne apna asli chehra dikha diya.</p>
+
+  <p>Uski maa ne…<br>
+  emotional blackmail kiya.</p>
+
+  <p>Uske bhai ne…<br>
+  dhamki di…</p>
+
+  <p><strong>Maarne ki… aur marne ki bhi.</strong></p>
+
+  <p>Udhar main…</p>
+
+  <p>Kuch bhi nahi jaanta tha…<br>
+  kya chal raha hai…</p>
+
+  <p>Main bas mehnat kar raha tha…<br>
+  us ek saal ke challenge ke liye…</p>
+
+  <p>Vishakha…</p>
+
+  <p>Har din ek jung lad rahi thi…<br>
+  apno ke khilaaf… apne pyar ke liye…</p>
+
+  <p>Har raat…<br>
+  wo mujhe bachane ki koshish karti…<br>
+  bina mujhe bataye…</p>
+
+  <p><strong>Lekin…</strong></p>
+
+  <p>Ek din…</p>
+
+  <p><strong>Aakhir wo ho gaya…<br>
+  jo kabhi nahi hona chahiye tha.</strong></p>
+
+</div>
+    
+    <div class="page" style="z-index:1">
+      
+
+  <h1>Ant… Ya Shuruaat?</h1>
+
+  <p>Aur phir…</p>
+
+  <p>Ek din…</p>
+
+  <p><strong>Vishakha ka call aaya…</strong></p>
+
+  <p>Uski awaaz…<br>
+  kaamp rahi thi…</p>
+
+  <p>Wo ro rahi thi…</p>
+
+  <p>Usne bas itna kaha:</p>
+
+  <p><strong>
+  "Ab nahi ho sakta…<br>
+  ghar wale nahi maanenge…"
+  </strong></p>
+
+  <p>Mera dil… wahi ruk gaya.</p>
+
+  <p>Wo keh rahi thi…</p>
+
+  <p>"Abhishek… sab khatam ho gaya…<br>
+  ghar wale meri shaadi kisi aur se kar rahe hain…"</p>
+
+  <p>Main chup tha…<br>
+  par andar se toot chuka tha.</p>
+
+  <p>Maine use rokne ki koshish ki…<br>
+  samjhaya…</p>
+
+  <p><strong>
+  "Mat karo… please mat karo…<br>
+  main nahi reh paunga…<br>
+  main mar jaunga…"
+  </strong></p>
+
+  <p>Main sab karne ko tayar tha…<br>
+  ladne ko bhi…<br>
+  duniya se bhi…</p>
+
+  <p>Lekin…</p>
+
+  <p>Mere saamne rakh diye gaye sawaal…</p>
+
+  <p>
+  👉 Kitna kama paya hai ab tak?<br>
+  👉 Kya tum use khush rakh paoge?<br>
+  👉 Stability hai tumhare paas?<br>
+  👉 Paiso ke bina uske sapne poore kar paoge?
+  </p>
+
+  <p>Main… chup tha.</p>
+
+  <p>Mere paas jawab the…<br>
+  par shayad main dena nahi chahta tha…</p>
+
+  <p>Kyunki…</p>
+
+  <p>Main chahta tha…<br>
+  <strong>wo ek baar kahe —</strong></p>
+
+  <p><strong>
+  "Mujhe paise nahi chahiye…<br>
+  mujhe sirf tum chahiye…"
+  </strong></p>
+
+  <p>Main sab kar deta…<br>
+  sach mein sab…</p>
+
+  <p>Bas ek baar…<br>
+  wo mujh par thoda aur bharosa karti…</p>
+
+  <p>Lekin…</p>
+
+  <p>Main uski taraf dekha…</p>
+
+  <p><strong>Wo chup thi.</strong></p>
+
+  <p>Uski khamoshi…<br>
+  sab kuch keh gayi.</p>
+
+  <p>Shayad…</p>
+
+  <p><strong>Wo bhi haar chuki thi.</strong></p>
+
+  <p>Shayad…<br>
+  ab wo bhi chahti thi…<br>
+  ki main use jaane du…</p>
+
+  <p><strong>Aur wo aage badh jaye…</strong></p>
+
+  <p>Us din…</p>
+
+  <p><strong>Pyar haar gaya…</strong><br>
+  ya shayad…<br>
+  majboori jeet gayi.</p>
+
+</div>
+   
+    <div class="page" style="z-index:0">
+
+  <h1> Adhuri Jung</h1>
+
+  <p>Abhishek nahi ruka.</p>
+
+  <p>Sab kuch tootne ke baad bhi…<br>
+  wo khada tha.</p>
+
+  <p>Usne khud se kaha:</p>
+
+  <p><strong>
+  "Ye end nahi hai…"
+  </strong></p>
+
+  <p>Pyar ab bhi tha…<br>
+  aur dil ke kisi kone mein…<br>
+  wo aaj bhi zinda thi.</p>
+
+  <p><strong>Ye jung abhi khatam nahi hui thi.</strong></p>
+
+  <p>Usne ek faisla liya…</p>
+
+  <p><strong>
+  "Agar mujhe kuch bhi hota hai…<br>
+  to uska zimmedar sirf aur sirf Hanshu Hans hoga…<br>
+  son of late Naresh Hans."
+  </strong></p>
+
+  <p>Ab darr khatam ho chuka tha…</p>
+
+  <p>Ab bas ek hi cheez thi —<br>
+  sach aur pyar.</p>
+
+  <p>Usne kaha:</p>
+
+  <p><strong>
+  "Main nahi hat raha piche…<br>
+  jo kaha hai, wo karke dikhaunga…"
+  </strong></p>
+
+  <p>December tak…</p>
+
+  <p><strong>wo wapas aayega.</strong></p>
+
+  <p>Ek kahani adhuri reh gayi hai…</p>
+
+  <p>Shayad uski ending happy hogi…<br>
+  ya shayad nahi…</p>
+
+  <p>Kisi ko nahi pata…</p>
+
+  <p><strong>Lekin ek baat pakki hai —</strong></p>
+
+  <p><strong>
+  Ye kahani khatam nahi hui hai…
+  </strong></p>
+
+  <p><strong>
+  Ye sirf ek rukawat hai…
+  </strong></p>
+
+  <p><strong>
+  "Pyar, Ek Adhuri Jung… abhi jaari hai."
+  </strong></p>
+
+</div>
+    <!-- <div class="page" style="z-index:0">12</div> -->
+
+  </div>
+
+</div>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-controls" id="controls" style="display:none;">
+  <button onclick="prevPage()">⬅</button>
+  <button onclick="nextPage()">➡</button>
+</div>
+
+<script>
+let pages = document.querySelectorAll(".page");
+let current = 0;
+
+function showPage(index){
+  pages.forEach((p,i)=>{
+    p.classList.remove("active");
+    if(i === index){
+      p.classList.add("active");
+    }
+  });
+}
+
+function startReading(){
+  cover.style.display="none";
+  main.style.display="block";
+  navbar.style.display="flex";
+  controls.style.display="flex";
+  showPage(current);
+}
+
+function goHome(){
+  location.reload();
+}
+
+function toggleTOC(){
+  let toc = document.getElementById("toc");
+  toc.style.display = toc.style.display === "block" ? "none" : "block";
+}
+
+function nextPage(){
+  if(current < pages.length - 1){
+    current++;
+    showPage(current);
+  }
+}
+
+function prevPage(){
+  if(current > 0){
+    current--;
+    showPage(current);
+  }
+}
+
+function goToPage(index){
+  current = index;
+  showPage(current);
+}
+</script>
+</body>
+</html>
